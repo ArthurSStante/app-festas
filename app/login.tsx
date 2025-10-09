@@ -1,6 +1,8 @@
 // import AnimatedWavesBackground from "@/src/components/AnimatedWavesBackground";
+import EllipseBackground from "@/src/components/EllipseBackground";
 import SocialButton from "@/src/components/socialButton";
 import { Ionicons } from "@expo/vector-icons";
+import { Stack } from "expo-router";
 import React, { useState } from "react";
 import {
   StyleSheet,
@@ -16,7 +18,8 @@ export default function LoginScreen() {
 
   return (
     <View style={styles.container}>
-      {/* <AnimatedWavesBackground /> */}
+      <Stack.Screen options={{ headerShown: false }} />
+      <EllipseBackground />
       <View style={styles.LoginContainer}>
         <Text style={styles.title}>Login</Text>
         <View style={styles.TextInputContainer}>
@@ -84,7 +87,6 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ffffff",
     justifyContent: "center",
     padding: 16,
   },
