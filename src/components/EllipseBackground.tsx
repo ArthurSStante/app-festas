@@ -5,8 +5,9 @@ export default function EllipseBackground() {
   return (
     <View style={styles.backgroundContainer}>
       <Image
-        source={require("../../assets/images/Ellipse-78.png")}
+        source={require("../../assets/images/Ellipse-82.png")}
         style={styles.angularEllipse78}
+
       />
       <Image
         source={require("../../assets/images/Ellipse-75.png")}
@@ -24,6 +25,10 @@ export default function EllipseBackground() {
         source={require("../../assets/images/Ellipse-79.png")}
         style={styles.angularEllipse79}
       />
+      {/* <Image
+        source={require("../../assets/images/teste1.png")}
+        style={styles.teste}
+      /> */}
     </View>
   );
 }
@@ -31,8 +36,15 @@ export default function EllipseBackground() {
 const styles = StyleSheet.create({
   backgroundContainer: {
     ...StyleSheet.absoluteFillObject, // Faz o container ocupar a tela inteira
-    backgroundColor: "#ffffff",
+    overflow: "hidden",
   },
+  // teste:{
+  //   position: 'absolute',
+  //   width: 865.07,
+  //   height: 1322.34,
+  //   top: -239.34,
+  //   left: -327.57,
+  // },
   angularEllipse78: {
     position: "absolute",
     width: 802.5,
