@@ -76,6 +76,7 @@ export default function LoginScreen() {
           <Text style={styles.footerTextBold}> Cadastre-se</Text>
         </Text>
       </View>
+      
     </View>
   );
 }
