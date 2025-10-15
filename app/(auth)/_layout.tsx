@@ -1,11 +1,12 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { Stack, Slot } from 'expo-router';
-import EllipseBackground from '../../src/components/EllipseBackground'; // Verifique o caminho
+import { Slot, Stack } from "expo-router";
+import React from "react";
+import { StyleSheet } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import EllipseBackground from "../../src/components/EllipseBackground"; // Verifique o caminho
 
 export default function AuthLayout() {
   return (
-    <View style={styles.container}>
+    <SafeAreaProvider style={styles.container}>
       {/* 1. O fundo é renderizado primeiro, ocupando toda a tela */}
       <EllipseBackground />
 
@@ -14,7 +15,7 @@ export default function AuthLayout() {
 
       {/* 3. O <Slot /> é onde o conteúdo da tela atual (login, cadastro, etc.) será renderizado */}
       <Slot />
-    </View>
+    </SafeAreaProvider>
   );
 }
 

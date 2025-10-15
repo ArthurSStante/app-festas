@@ -76,7 +76,6 @@ export default function LoginScreen() {
           <Text style={styles.footerTextBold}> Cadastre-se</Text>
         </Text>
       </View>
-      
     </View>
   );
 }
@@ -135,7 +134,7 @@ const styles = StyleSheet.create({
   dividerLine: {
     flex: 1,
     height: 1,
-    backgroundColor: "#CCC",
+    backgroundColor: "rgba(84,84,86,0.34)",
   },
   dividerText: {
     marginHorizontal: 10,
