@@ -1,32 +1,45 @@
-import React from 'react';
-import { TouchableOpacity, Text, StyleSheet, TouchableOpacityProps } from 'react-native';
+import React from "react";
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  TouchableOpacityProps,
+} from "react-native";
 
 // Definimos as propriedades que nosso botão vai aceitar
 interface BotaoProps extends TouchableOpacityProps {
   title: string;
+  backgroundColor?: string;
+  textColor?: string;
 }
 
-export default function Botao({ title, ...rest }: BotaoProps) {
+export default function Botao({
+  title,
+  backgroundColor = "#8359E3",
+  textColor = "#FFFFFF",
+  style,
+  ...rest
+}: BotaoProps) {
   return (
-    <TouchableOpacity style={styles.container} {...rest}>
-      <Text style={styles.texto}>{title}</Text>
+    <TouchableOpacity
+      style={[styles.container, { backgroundColor }, style]}
+      {...rest}
+    >
+      <Text style={[styles.texto, { color: textColor }]}>{title}</Text>
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#8359E3', // Um roxo elegante
     padding: 15,
     borderRadius: 30,
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%',
-    marginVertical: 10,
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
   },
   texto: {
-    color: '#FFFFFF',
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });

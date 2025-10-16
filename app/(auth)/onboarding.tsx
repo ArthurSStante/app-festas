@@ -25,7 +25,10 @@ export default function Onboarding() {
 
       {/* 2. Container exclusivo para o botão */}
       <View style={styles.buttonContainer}>
-        <Botao title="Vamos lá" onPress={() => router.replace("/login")} />
+        <Botao
+          title="Vamos lá"
+          onPress={() => router.replace("/CadastroScreen")}
+        />
       </View>
     </SafeAreaProvider>
   );
