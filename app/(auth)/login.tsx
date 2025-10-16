@@ -10,12 +10,14 @@ import {
   View,
 } from "react-native";
 import Botao from "../../src/components/button";
+import EllipseBackground from "../../src/components/EllipseBackground";
 
 export default function LoginScreen() {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   return (
     <View style={styles.container}>
+      <EllipseBackground />
       <View style={styles.LoginContainer}>
         <Text style={styles.title}>Login</Text>
         <View style={styles.TextInputContainer}>
@@ -85,7 +87,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     padding: 16,
-    backgroundColor: "transparent",
   },
   LoginContainer: {
     gap: 20,

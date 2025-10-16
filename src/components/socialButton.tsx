@@ -24,7 +24,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({
     case "google":
       iconComponent = (
         <Image
-          source={require("../../assets/images/google-icon.png")}
+          source={require("../../assets/images/icons/google-icon.png")}
           style={styles.icon}
         />
       );

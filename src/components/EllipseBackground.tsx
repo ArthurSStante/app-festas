@@ -7,7 +7,7 @@ export default function EllipseBackground() {
   return (
     <View style={styles.backgroundContainer}>
       <Image
-        source={require("../../assets/images/iPhone14.png")}
+        source={require("../../assets/images/ellipseBackground.png")}
         style={styles.teste}
       />
     </View>

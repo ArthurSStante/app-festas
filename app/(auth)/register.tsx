@@ -3,14 +3,16 @@ import SocialButton from "@/src/components/socialButton";
 import { useRouter } from "expo-router";
 import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
+import EllipseBackground from "../../src/components/EllipseBackground";
 
 export default function CadastroScreen() {
   const router = useRouter();
   return (
     <View style={styles.container}>
+      <EllipseBackground />
       <View>
         <Image
-          source={require("../../assets/images/Saly-3.png")}
+          source={require("../../assets/images/illustrations/Saly-3.png")}
           style={styles.image}
         />
       </View>
@@ -18,7 +20,7 @@ export default function CadastroScreen() {
         <View>
           <Botao
             title="Ja tem uma conta? Entre"
-            onPress={() => router.replace("/login")}
+            onPress={() => router.push("/login")}
           />
         </View>
         <View>
